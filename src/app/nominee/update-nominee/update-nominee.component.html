@@ -1,0 +1,37 @@
+<div class="container" id="gtco-footer">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      name
+      <input class="form-control" [(ngModel)]="nominees.name" name="name" />
+    </div>
+    <div class="form-group">
+      govtId
+      <input class="form-control" [(ngModel)]="nominees.govtId" name="govtId" />
+    </div>
+    <div class="form-group">
+      govtIdType
+      <input
+        class="form-control"
+        [(ngModel)]="nominees.govtIdType"
+        name="govtIdType"
+      />
+    </div>
+    <div class="form-group">
+      phoneNo
+      <input
+        class="form-control"
+        [(ngModel)]="nominees.phoneNo"
+        name="phoneNo"
+      />
+    </div>
+    <div class="form-group">
+      relation
+      <input
+        class="form-control"
+        [(ngModel)]="nominees.relation"
+        name="relation"
+      />
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
