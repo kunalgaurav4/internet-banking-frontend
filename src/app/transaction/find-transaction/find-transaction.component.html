@@ -1,0 +1,32 @@
+
+<h2>Transaction Details</h2> 
+
+<hr/>
+<div *ngIf="transactions">
+  <div>
+    <label><b>Transaction Id: </b></label> {{transactions.transactionId}}
+  </div>
+  <div>
+    <label><b>Transaction Amount : </b></label> {{transactions.amount}}
+  </div>
+  <div>
+    <label><b>Transaction Type: </b></label> {{transactions.transactionType}}
+  </div> 
+  <div>
+    <label><b>Transaction Date & Time: </b></label> {{transactions.dateTime}}
+  </div> 
+  <div>
+    <label><b>Transaction Status: </b></label> {{transactions.transactionStatus}}
+  </div> 
+  <div>
+    <label><b>Transaction Remarks: </b></label> {{transactions.transactionRemarks}}
+  </div> 
+  
+</div>
+
+
+<br>
+<br>
+<button (click)="find()" class="btn btn-primary">Back to Transaction List</button><br>
+
+

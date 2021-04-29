@@ -1,0 +1,38 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Transaction List</h2>
+  </div>
+
+  <div class="panel-body" id="gtco-footer">
+    <input
+      [(ngModel)]="transactionId"
+      name="transactionId"
+      (keyup)="searchByTransactionId()"
+      placeholder="Enter Id to Search"
+    />
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Transaction Id</th>
+          <th>Account Id</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let t of transactions">
+          <td>{{ t.transactionId }}</td>
+          <td *ngIf="t.account.accountId != null">{{ t.account.accountId }}</td>
+          <td>
+            <button
+              (click)="findTransaction(t.transactionId)"
+              class="btn btn-info"
+              style="margin-left: 10px"
+            >
+              View Details
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
