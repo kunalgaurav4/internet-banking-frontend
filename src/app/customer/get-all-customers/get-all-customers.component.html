@@ -1,0 +1,39 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Customer List</h2>
+    </div>
+    <div class="panel-body">
+      <input
+        [(ngModel)]="cId"
+        name="customerId"
+        (keyup)="searchBycustomerId()"
+        placeholder="Enter Id to Search"
+        type="text"
+        class="form-control"
+      />
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>customerId</th>
+           
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let c of customers">
+            <td>{{c.customerId}}</td>
+            <td>
+              <button (click)="findCustomer(c.customerId)" class="btn btn-info" style="margin-left: 10px">Details</button>
+              <button (click)="updateCustomer(c.customerId)" class="btn btn-warning"
+                style="margin-left: 10px">Update</button>
+              <button (click)="deleteCustomer(c.customerId)" class="btn btn-danger"
+                style="margin-left: 10px">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+</div>
+  
+  
