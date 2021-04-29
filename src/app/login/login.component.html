@@ -1,0 +1,38 @@
+<app-nav></app-nav>
+<div class="container">
+  <h2>Login</h2>
+  <hr />
+  <div class="radio form-check form-check-inline">
+    <label>
+      <input
+        class="form-check-input"
+        type="radio"
+        name="account"
+        value="customer"
+        (click)="setradio('customer')"
+        [checked]="1"
+      />
+      Customer
+    </label>
+  </div>
+  <!-- <div class="radio form-check form-check-inline">
+    <label>
+      <input
+        class="form-check-input"
+        type="radio"
+        name="account"
+        value="admin"
+        (click)="setradio('admin')"
+      />
+      Admin
+    </label>
+  </div> -->
+
+  <div *ngIf="isSelected('customer')">
+    <app-user></app-user>
+  </div>
+
+  <div *ngIf="isSelected('admin')">
+    <app-admin></app-admin>
+  </div>
+</div>
