@@ -1,0 +1,33 @@
+<app-nav></app-nav>
+<div class="container" id="gtco-footer">
+  <!-- <h3 style="color: red;">{{message}}</h3> -->
+  <form loginForm="ngForm" (ngSubmit)="login()">
+    <small class="text-danger">{{ message }}</small>
+    <div class="form-group">
+      <input
+        type="customerId"
+        class="form-control"
+        placeholder="Enter Customer Id"
+        name="customerId"
+        [(ngModel)]="user.customerId"
+      />
+    </div>
+    <div class="form-group">
+      <input
+        type="password"
+        class="form-control"
+        placeholder="Enter Password"
+        name="password"
+        [(ngModel)]="user.password"
+      />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Login</button>
+
+    <button class="btn btn-primary m-5">
+      <a routerLink="signup">SignUp New Customer</a>
+    </button>
+  </form>
+</div>
+
+<app-footer></app-footer>
