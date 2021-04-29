@@ -1,0 +1,30 @@
+<h2>Customer Details</h2> 
+
+<hr/>
+<div *ngIf="customers">
+  <div>
+    <label><b>Customer Id: </b></label> {{customers.customerId}}
+  </div>
+  <div>
+    <label><b>Customer Name: </b></label> {{customers.customerName}}
+  </div>
+  <div>
+    <label><b>Email Id: </b></label> {{customers.emailId}}
+  </div> 
+  <div>
+    <label><b>Age: </b></label> {{customers.age}}
+  </div> 
+  <div>
+    <label><b>Phone Number: </b></label> {{customers.phoneNo}}
+  </div> 
+  <div>
+    <label><b>Gender: </b></label> {{customers.gender}}
+  </div> 
+</div>
+
+<br>
+<br>
+<button (click)="find()" class="btn btn-primary">Back to Customer List</button><br>
+
+
+

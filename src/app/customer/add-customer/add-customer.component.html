@@ -1,0 +1,87 @@
+<h3>Create Customer</h3>
+<!-- <div [hidden]="submitted" style="width: 400px;"> -->
+<div class="container">
+  <div>
+    <form [formGroup]="cusForm" (ngSubmit)="save()">
+      <div class="form-group">
+        <input
+          class="form-control"
+          placeholder="Enter Customer Name"
+          formControlName="customerName"
+        />
+      </div>
+      <div class="form-group">
+        <input
+          class="form-control"
+          placeholder="Enter Age"
+          formControlName="age"
+        />
+      </div>
+      <div class="form-group">
+        <input
+          class="form-control"
+          placeholder="Enter Email ID"
+          formControlName="emailId"
+        />
+      </div>
+      <div class="form-group">
+        <input
+          class="form-control"
+          placeholder="Enter Phone Number"
+          formControlName="phoneNo"
+        />
+      </div>
+      <div class="form-group">
+        <input
+          class="form-control"
+          placeholder="Enter password"
+          formControlName="password"
+        />
+      </div>
+      <div class="form-group">
+        <input
+          class="form-control"
+          placeholder="Enter Gender"
+          formControlName="gender"
+        />
+      </div>
+
+      <button type="submit" class="btn btn-success" [disabled]="!cusForm.valid">
+        Submit
+      </button>
+    </form>
+  </div>
+  <!-- <div [hidden]="!submitted">
+    <h4>You submitted successfully!</h4>
+</div> -->
+
+  <!-- <div class="form-group">
+    <label for="name">CustomerId</label>
+    <input type="text" class="form-control" id="customerId" required [(ngModel)]="customers.customerId" name="customerId">
+</div>
+
+<div class="form-group">
+    <label for="name">CustomerName</label>
+    <input type="text" class="form-control" id="customerName" required [(ngModel)]="customers.name" name="customerName">
+</div>
+
+<div class="form-group">
+    <label for="name">Age</label>
+    <input type="text" class="form-control" id="age" required [(ngModel)]="customers.age" name="age">
+</div>
+
+<div class="form-group">
+    <label for="name">Email Id </label>
+    <input type="text" class="form-control" id="emailId" required [(ngModel)]="customers.emailId" name="emailId">
+</div>
+
+<div class="form-group">
+    <label for="name">Phone Number</label>
+    <input type="text" class="form-control" id="phoneNo" required [(ngModel)]="customers.phoneNo" name="phoneNo">
+</div>
+
+<div class="form-group">
+    <label for="name">Gender</label>
+    <input type="text" class="form-control" id="gender" required [(ngModel)]="customers.gender" name="gender">
+</div> -->
+</div>

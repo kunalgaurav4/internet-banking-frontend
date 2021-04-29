@@ -1,0 +1,31 @@
+<app-nav></app-nav>
+
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark container r">
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a routerLink="" class="nav-link" routerLinkActive="active"
+        >Customer List</a
+      >
+      <!-- <a [routerLink]="['./']">Customer List</a> -->
+    </li>
+    <li class="nav-item">
+      <a routerLink="add" class="nav-link" routerLinkActive="active"
+        >Add Customer</a
+      >
+    </li>
+  </ul>
+</nav>
+
+<div class="container">
+  <br />
+  <h2 style="text-align: center">Customer Module</h2>
+  <hr />
+  <div class="card">
+    <div class="card-body">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>
