@@ -1,0 +1,30 @@
+<h2>Beneficiary Details</h2> 
+
+<hr/>
+<div *ngIf="beneficiaries">
+  <div>
+    <label><b>Beneficiary Id: </b></label> {{beneficiaries.beneficiaryId}}
+  </div>
+  <div>
+    <label><b>Beneficiary Name: </b></label> {{beneficiaries.beneficiaryName}}
+  </div>
+  <div>
+    <label><b>Beneficiary Number: </b></label> {{beneficiaries.beneficiaryAccNo}}
+  </div> 
+  <div>
+    <label><b>IFSC: </b></label> {{beneficiaries.ifsc}}
+  </div> 
+  <div>
+    <label><b>Account Type: </b></label> {{beneficiaries.accountType}}
+  </div> 
+  <div>
+    <label><b>Account Id:</b></label>{{beneficiaries.account.accountId}}
+  </div>
+</div>
+
+
+<br>
+<br>
+<button (click)="find()" class="btn btn-primary">Back to Beneficiary List</button><br>
+
+
