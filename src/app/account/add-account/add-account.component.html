@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="radio form-check form-check-inline">
+    <label>
+      <input
+        class="form-check-input"
+        type="radio"
+        name="account"
+        value="saving"
+        (click)="setradio('saving')"
+        [checked]="1"
+      />
+      Saving Account
+    </label>
+  </div>
+  <div class="radio form-check form-check-inline">
+    <label>
+      <input
+        class="form-check-input"
+        type="radio"
+        name="account"
+        value="term"
+        (click)="setradio('term')"
+      />
+      Term Account
+    </label>
+  </div>
+
+  <div *ngIf="isSelected('saving')">
+    <app-add-saving-account></app-add-saving-account>
+  </div>
+
+  <div *ngIf="isSelected('term')">
+    <app-add-term-account></app-add-term-account>
+  </div>
+</div>

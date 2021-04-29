@@ -1,0 +1,51 @@
+<!-- saving add -->
+<h2 class="text-center">Add Term Account</h2>
+<hr />
+<!-- <div [hidden]="submitted" style="width: 400px;"> -->
+<div class="container" id="gtco-footer">
+  <div>
+    <form [formGroup]="accForm" (ngSubmit)="save()">
+      <div class="form-group">
+        <input
+          class="form-control"
+          placeholder="Enter Amount to add"
+          formControlName="balance"
+        />
+      </div>
+      <div class="form-group">
+        <input
+          class="form-control"
+          placeholder="Enter interestRate"
+          formControlName="interestRate"
+        />
+      </div>
+      <div class="form-group">
+        <input
+          class="form-control"
+          placeholder="Enter Penalty Amount"
+          formControlName="penaltyAmount"
+        />
+      </div>
+      <div class="form-group">
+        <input
+          class="form-control"
+          placeholder="Enter Months Fix"
+          formControlName="months"
+        />
+      </div>
+      <div formGroupName="user">
+        <div class="form-group">
+          <input
+            class="form-control"
+            placeholder="Enter Customer Id"
+            formControlName="customerId"
+          />
+        </div>
+      </div>
+
+      <button type="submit" class="btn-change" [disabled]="!accForm.valid">
+        Add Term Account
+      </button>
+    </form>
+  </div>
+</div>
