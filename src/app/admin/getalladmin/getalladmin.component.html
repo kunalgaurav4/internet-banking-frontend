@@ -1,0 +1,29 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Admin List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Admin Id</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let a of admins">
+            <td>{{a.customerId}}</td>
+
+            <td>
+              <button (click)="findAdmin(a.customerId)" class="btn btn-info" style="margin-left: 10px">Details</button>
+              <button (click)="updateAdmin(a.customerId)" class="btn btn-warning"
+                style="margin-left: 10px">Update</button>
+              <button (click)="deleteAdmin(a.customerId)" class="btn btn-danger"
+                style="margin-left: 10px">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+  </div>
