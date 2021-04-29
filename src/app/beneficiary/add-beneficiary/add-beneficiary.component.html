@@ -1,0 +1,30 @@
+<h3>Create Beneficiary</h3>
+<!-- <div [hidden]="submitted" style="width: 400px;"> -->
+<div class="container">
+    <div>
+        <form [formGroup]="benForm" (ngSubmit)="save()">
+            <!-- <div class="form-group">
+                <input class="form-control" placeholder="Enter Beneficiary Id" formControlName="beneficiaryId">
+            </div> -->
+            <div class="form-group">
+                <input class="form-control" placeholder="Enter Beneficiary Name" formControlName="beneficiaryName">
+                
+            </div>
+            <div class="form-group">
+                <input class="form-control" placeholder="Enter Beneficiary Account Number" formControlName="beneficiaryAccNo">
+            </div>
+            <div class="form-group">
+                <input class="form-control" placeholder="Enter IFSC code" formControlName="ifsc">
+            </div>
+            <div class="form-group">
+                <input class="form-control" placeholder="Enter Account Type" formControlName="accountType">
+            </div>
+          <div formGroupName="account">
+            <div class="form-group">
+                <input class="form-control" placeholder="Enter Account Id" formControlName="accountId">
+
+            </div>
+           </div>
+    <button type="submit" class="btn btn-success" [disabled]="!benForm.valid">Submit</button>
+</form>
+</div>

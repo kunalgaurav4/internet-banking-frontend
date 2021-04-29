@@ -1,0 +1,36 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Beneficiary List</h2>
+    </div>
+    <div class="panel-body">
+      
+      <input [(ngModel)]="bId" name="beneficiaryId" (keyup)="searchByBeneficiaryId()" placeholder="Enter Id to Search">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Beneficiary Id</th>
+            <th>Account Id</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+
+
+        <tbody>
+          <tr *ngFor="let b of beneficiaries">
+            <td>{{b.beneficiaryId}}</td>
+            <td *ngIf="b.account.accountId!=null">{{b.account.accountId}}</td>
+            <td> 
+                <button (click)="findBeneficiary(b.beneficiaryId)" class="btn btn-info" style="margin-left: 10px">Details</button>
+                <button (click)="updateBeneficiary(b.beneficiaryId)" class="btn btn-warning"
+              style="margin-left: 10px">Update</button>
+            <button (click)="deleteBeneficiary(b.beneficiaryId)" class="btn btn-danger"
+              style="margin-left: 10px">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+</div>
+  
+  

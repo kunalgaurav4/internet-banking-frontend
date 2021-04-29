@@ -1,0 +1,25 @@
+<div class="container">
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            BeneficiaryId
+            <input class="form-control" [(ngModel)]="beneficiaries.beneficiaryId" name="beneficiaryId">
+        </div>
+        <div class="form-group">
+            BeneficiaryName
+            <input class="form-control" [(ngModel)]="beneficiaries.beneficiaryName" name="beneficiaryName">
+        </div>
+        <div class="form-group">
+            BeneficiaryNumber
+            <input class="form-control" [(ngModel)]="beneficiaries.beneficiaryAccNo" name="beneficiaryAccNo">
+        </div>
+        <div class="form-group">
+            IFSC
+            <input class="form-control" [(ngModel)]="beneficiaries.ifsc" name="ifsc">
+        </div>
+        <div class="form-group">
+            AccountType
+            <input class="form-control" [(ngModel)]="beneficiaries.accountType" name="accountType">
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+</div>
