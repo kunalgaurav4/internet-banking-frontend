@@ -1,0 +1,65 @@
+<app-nav></app-nav>
+<nav class="container navbar navbar-expand-sm bg-primary navbar-dark r">
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <div *ngIf="a=='ADMIN'">
+    <li class="nav-item">
+      <a routerLink="list" class="nav-link" routerLinkActive="active"
+        >Account List</a
+      >
+    </li>
+    <li class="nav-item">
+      <a routerLink="addAccount" class="nav-link" routerLinkActive="active"
+        >Add Account</a
+      >
+    </li> 
+    <li class="nav-item">
+      <a routerLink="deposit" class="nav-link" routerLinkActive="active"
+        >Deposit</a
+      >
+    </li>
+    
+    <li class="nav-item">
+      <a routerLink="withdraw" class="nav-link" routerLinkActive="active"
+        >Withdraw</a
+      >
+    </li>
+    </div>
+    <li class="nav-item">
+      <a routerLink="transfer" class="nav-link" routerLinkActive="active"
+        >Transfer</a
+      >
+    </li>
+    <li class="nav-item">
+      <a routerLink="nominee" class="nav-link" routerLinkActive="active"
+        >Nominee</a
+      >
+    </li>
+    <li class="nav-item">
+      <a routerLink="beneficiary" class="nav-link" routerLinkActive="active"
+        >Beneficiary</a
+      >
+    </li>
+    <li class="nav-item">
+      <a routerLink="transaction" class="nav-link" routerLinkActive="active"
+        >Transaction</a
+      >
+    </li>
+
+    <li class="nav-item">
+      <a routerLink="login" class="nav-link" routerLinkActive="active"
+        >Sign Out</a
+      >
+    </li>
+  </ul>
+</nav>
+
+<div class="container">
+  <div class="card">
+    <div class="card-body">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

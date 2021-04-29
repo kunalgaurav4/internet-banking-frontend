@@ -1,0 +1,32 @@
+<h2>Account Details</h2>
+
+<hr />
+
+<table class="table table-striped">
+  <tr>
+    <th>Account Id:</th>
+    <td>{{ accounts.accountId }}</td>
+  </tr>
+  <tr>
+    <th>Balance:</th>
+    <td>₹{{ accounts.balance }}</td>
+  </tr>
+  <tr>
+    <th>Customer Id</th>
+    <td>{{ accounts.user.customerId }}</td>
+  </tr>
+
+  <tr>
+    <th>Interest:</th>
+    <td>{{ accounts.interestRate }}%</td>
+  </tr>
+  <tr>
+    <th>Account Type:</th>
+    <td>{{ accounts.accountType }}</td>
+  </tr>
+</table>
+
+<br />
+<br />
+<button (click)="find()" class="btn btn-primary">Back to Account List</button
+><br />

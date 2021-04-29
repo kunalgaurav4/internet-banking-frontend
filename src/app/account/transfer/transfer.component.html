@@ -1,0 +1,50 @@
+<h2 class="text-center">Transfer Money</h2>
+<hr />
+<div class="container" id="gtco-footer">
+  <div>
+    <div class="form-group">
+      <input
+        class="form-control"
+        placeholder="Enter Amount"
+        name="amount"
+        [(ngModel)]="amount"
+      />
+    </div>
+    <div class="form-group">
+      <input
+        class="form-control"
+        placeholder="Enter Sender AccountId"
+        name="senderAccountId, "
+        [(ngModel)]="senderAccountId"
+      />
+    </div>
+    <div class="form-group">
+      <input
+        class="form-control"
+        placeholder="Enter Reciver AccountId"
+        name="reciverAccountId"
+        [(ngModel)]="reciverAccountId"
+      />
+    </div>
+
+    <div class="form-group">
+      <input
+        class="form-control"
+        placeholder="Enter Customer Id"
+        name="customerId"
+        [(ngModel)]="customerId"
+      />
+    </div>
+    <div class="form-group">
+      <input
+        class="form-control"
+        placeholder="Enter Password"
+        name="password"
+        [(ngModel)]="password"
+      />
+    </div>
+    <button type="button" (click)="transfer()" class="btn btn-primary">
+      Transfer Amount
+    </button>
+  </div>
+</div>

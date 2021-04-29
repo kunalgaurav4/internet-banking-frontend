@@ -1,0 +1,25 @@
+<h2 class="text-center">Deposit Money</h2>
+<hr />
+<div class="container" id="gtco-footer">
+  <div>
+    <div class="form-group">
+      <input
+        class="form-control"
+        placeholder="Enter accountId"
+        name="accountId"
+        [(ngModel)]="accountId"
+      />
+    </div>
+    <div class="form-group">
+      <input
+        class="form-control"
+        placeholder="Enter Amount"
+        name="amount"
+        [(ngModel)]="amount"
+      />
+    </div>
+    <button type="button" (click)="deposit()" class="btn btn-primary">
+      Add Amount
+    </button>
+  </div>
+</div>

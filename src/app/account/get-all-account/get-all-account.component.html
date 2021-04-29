@@ -1,0 +1,63 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Account List</h2>
+  </div>
+  <div class="panel-body">
+    <div class="panel-body" id="gtco-footer">
+      <input
+        [(ngModel)]="aId"
+        name="accountId"
+        (keyup)="searchByAccountId()"
+        placeholder="Enter Id to Search"
+        type="text"
+        class="form-control"
+      />
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Account Id</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let a of accounts">
+            <td>{{ a.accountId }}</td>
+
+            <!-- <td *ngIf="n.account.accountId != null">{{ n.account.accountId }}</td> -->
+            <td>
+              <button
+                (click)="findAccount(a.accountId)"
+                class="btn btn-info"
+                style="margin-left: 10px"
+              >
+                Details
+              </button>
+              <button
+                (click)="updateAccount(a.accountId)"
+                class="btn btn-warning"
+                style="margin-left: 10px"
+              >
+                Update
+              </button>
+
+              <button
+                (click)="deleteAccount(a.accountId)"
+                class="btn btn-danger"
+                style="margin-left: 10px"
+              >
+                Delete
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<!-- <div>
+  <jw-pagination
+    class="pageination"
+    [items]="items"
+    (changePage)="onChangePage($event)"
+  ></jw-pagination>
+</div> -->
