@@ -1,0 +1,27 @@
+<h2>Nominee Details</h2>
+
+<hr />
+<div *ngIf="nominees">
+  <div>
+    <label><b>Nominee Id: </b></label> {{ nominees.nomineeId }}
+  </div>
+  <div>
+    <label><b>Name: </b></label> {{ nominees.name }}
+  </div>
+  <div>
+    <label><b>Government Id Name: </b></label> {{ nominees.govtId }}
+  </div>
+  <div>
+    <label><b>Government Id Type: </b></label> {{ nominees.govtIdType }}
+  </div>
+  <div>
+    <label><b>Phone Number: </b></label> {{ nominees.phoneNo }}
+  </div>
+  <div>
+    <label><b>Relation: </b></label> {{ nominees.relation }}
+  </div>
+</div>
+
+<br />
+<br />
+<button (click)="find()" class="btn btn-primary">Back to Nominee List</button><br />

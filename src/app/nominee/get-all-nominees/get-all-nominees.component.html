@@ -1,0 +1,62 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Nominee List</h2>
+  </div>
+  <div class="panel-body" id="gtco-footer">
+    <input
+      [(ngModel)]="nId"
+      name="nomineeId"
+      (keyup)="searchByNomId()"
+      placeholder="Enter Id to Search"
+      type="text"
+      class="form-control"
+    />
+
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Nominee Id</th>
+          <th>Account Id</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let n of nominees">
+          <td>{{ n.nomineeId }}</td>
+
+          <td *ngIf="n.account.accountId != null">{{ n.account.accountId }}</td>
+          <td>
+            <button
+              (click)="findNominee(n.nomineeId)"
+              class="btn btn-info"
+              style="margin-left: 10px"
+            >
+              Details
+            </button>
+            <button
+              (click)="updateNominee(n.nomineeId)"
+              class="btn btn-warning"
+              style="margin-left: 10px"
+            >
+              Update
+            </button>
+            <button
+              (click)="deleteNominee(n.nomineeId)"
+              class="btn btn-danger"
+              style="margin-left: 10px"
+            >
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<!-- <div>
+  <jw-pagination
+    class="pageination"
+    [items]="items"
+    (changePage)="onChangePage($event)"
+  ></jw-pagination>
+</div> -->
