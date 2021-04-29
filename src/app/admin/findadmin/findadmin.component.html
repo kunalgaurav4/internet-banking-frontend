@@ -1,0 +1,22 @@
+<h2>Admin Details</h2> 
+
+<hr/>
+<div *ngIf="admins">
+  <div>
+    <label><b>Admin Id: </b></label> {{admins.customerId}}
+  </div>
+  <div>
+    <label><b>Name: </b></label> {{admins.adminName}}
+  </div>
+  <div>
+    <label><b>Phone Number: </b></label> {{admins.adminContact}}
+  </div> 
+  <div>
+    <label><b>Email Id: </b></label> {{admins.adminEmailId}}
+  </div> 
+</div>
+
+<br>
+<br>
+<button (click)="find()" class="btn btn-primary">Back to admin List</button><br>
+
